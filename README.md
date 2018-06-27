@@ -1,11 +1,6 @@
-# PyTorch-MADA
+# PyTorch-AlexNet_Finetune
 
-A pytorch implementation for paper *Partial Transfer Learning with Selective Adversarial Networks*
-
-    InProceedings (cao2017partial)
-    Cao, Z.; Long, M.; Wang, J. & Jordan, M. I.
-    Partial Transfer Learning with Selective Adversarial Networks
-    The IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018
+A pytorch implementation for fine-tuning AlexNet on Office dataset.
 
 ## Environment
 
@@ -14,13 +9,10 @@ A pytorch implementation for paper *Partial Transfer Learning with Selective Adv
 
 ## Result
 
-results of the default `params.py`
-
-|                                    | SVHN (Source)  | MNIST (Target)|
-| :--------------------------------: | :------------: | :-----------: |
-| Source Classifier                  |   ----%   |  ----%   |
-| DANN                               |                |  ----%   |
-
-## LICENSE
-
-MIT
+|                |   A-W   |   A-D   |
+| :------------: | :-----: | :-----: |
+| DDC            |         |         |
+| DAAN           |         |         |
+| DAN            |         |         |
+| this           | 0.5169  |         |
+| this(LRN)      | 0.4440  |         |
