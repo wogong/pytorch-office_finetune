@@ -6,7 +6,7 @@ import torch.optim as optim
 from utils.utils import save_model
 from core.test import eval
 
-def train_src(model, src_data_loader, tgt_data_loader, device, params):
+def train_src(model, src_data_loader, src_data_loader_eval, tgt_data_loader, tgt_data_loader_eval, device, params):
     """Train classifier for source domain."""
     ####################
     # 1. setup network #
@@ -62,8 +62,8 @@ def train_src(model, src_data_loader, tgt_data_loader, device, params):
 
         # eval model on test set
         if ((epoch + 1) % params.eval_step == 0):
-            eval(model, src_data_loader, device)
-            eval(model, tgt_data_loader, device)
+            eval(model, src_data_loader_eval, device)
+            eval(model, tgt_data_loader_eval, device)
 
         # save model parameters
         if ((epoch + 1) % params.save_step == 0):

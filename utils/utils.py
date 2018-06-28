@@ -33,12 +33,9 @@ def init_random_seed(manual_seed):
 def get_data_loader(name, dataset_root, batch_size, train=True):
     """Get data loader by name."""
     if name == "amazon31":
-        return get_office(dataset_root, batch_size, 'amazon')
+        return get_office(dataset_root, batch_size, 'amazon', train)
     elif name == "webcam31":
-        return get_office(dataset_root, batch_size, 'webcam')
-    elif name == "webcam10":
-        return get_officecaltech(dataset_root, batch_size, 'webcam')
-
+        return get_office(dataset_root, batch_size, 'webcam', train)
 
 def init_model(net, restore):
     """Init models with cuda and weights."""
