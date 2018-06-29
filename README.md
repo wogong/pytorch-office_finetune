@@ -11,8 +11,5 @@ A PyTorch implementation for fine-tuning AlexNet on Office dataset.
 
 |                |   A-W   |   A-D   |
 | :------------: | :-----: | :-----: |
-| DDC            |         |         |
-| DAAN           |         |         |
-| DAN            |         |         |
-| this           | 0.5497  |         |
-| this(LRN)      | 0.4440  |         |
+| this(alexnet)  | 0.5497  |         |
+| this(resnet50) | 0.7522  |         |

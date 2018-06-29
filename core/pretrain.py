@@ -18,10 +18,9 @@ def train_src(model, src_data_loader, src_data_loader_eval, tgt_data_loader, tgt
     # setup criterion and optimizer
     parameter_list = [
         {"params": model.features.parameters(), "lr": 0.001},
-        {"params": model.fc.parameters()},
-        {"params": model.classifier.parameters()},
+        {"params": model.fc.parameters(), "lr": 0.01},
     ]
-    optimizer = optim.SGD(parameter_list, lr=0.01, momentum=0.9)
+    optimizer = optim.SGD(parameter_list, momentum=0.9)
     criterion = nn.CrossEntropyLoss()
 
     ####################
