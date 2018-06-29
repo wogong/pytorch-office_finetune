@@ -27,4 +27,4 @@ def eval(model, data_loader, device):
     loss /= len(data_loader)
     acc = acc / len(data_loader.dataset)
 
-    print("Avg Loss = {}, Avg Accuracy = {:2%}".format(loss, acc))
+    print("Avg Loss = {:.6f}, Avg Accuracy = {:.6f}".format(loss, acc))
