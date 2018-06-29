@@ -1,6 +1,6 @@
 # PyTorch-AlexNet_Finetune
 
-A pytorch implementation for fine-tuning AlexNet on Office dataset.
+A PyTorch implementation for fine-tuning AlexNet on Office dataset.
 
 ## Environment
 
@@ -14,5 +14,5 @@ A pytorch implementation for fine-tuning AlexNet on Office dataset.
 | DDC            |         |         |
 | DAAN           |         |         |
 | DAN            |         |         |
-| this           | 0.5169  |         |
+| this           | 0.5497  |         |
 | this(LRN)      | 0.4440  |         |
