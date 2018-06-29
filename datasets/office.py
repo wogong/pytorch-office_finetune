@@ -9,7 +9,7 @@ def get_office(dataset_root, batch_size, category, train=True):
     """Get Office datasets loader."""
     # image pre-processing
     if train:
-        pre_process = transforms.Compose([transforms.Resize(227),
+        pre_process = transforms.Compose([transforms.Resize(224),
                                           transforms.ToTensor(),
                                           transforms.Normalize(
                                              mean=(0.485, 0.456, 0.406),
@@ -18,7 +18,7 @@ def get_office(dataset_root, batch_size, category, train=True):
         # Resize -> RandomResizedCrop 精度大幅降低，0.51 -> 0.44
     else:
         pre_process = transforms.Compose([transforms.Resize(256),
-                                          transforms.CenterCrop(227),
+                                          transforms.CenterCrop(224),
                                           transforms.ToTensor(),
                                           transforms.Normalize(
                                              mean=(0.485, 0.456, 0.406),
