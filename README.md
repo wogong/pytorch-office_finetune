@@ -11,8 +11,13 @@ A PyTorch implementation for fine-tuning AlexNet and ResNet on Office dataset.
 
 |                |   A-W   |   A-D   |
 | :------------: | :-----: | :-----: |
-| this(alexnet)  | 0.5497  |         |
+| this(alexnet)  | 0.5874  |         |
 | this(resnet50) | 0.7597  |         |
+
+## Note
+
+- alexnet pretrained model is converted from caffe pretrained model, can be download [here]()
+- LRN layer is officially supported now
 
 ## links
 
