@@ -1,6 +1,6 @@
 import torch.nn as nn
 from torchvision import models
-from .alexnet_cz import alexnet
+from .alexnet import alexnet
 
 
 class AlexModel(nn.Module):
