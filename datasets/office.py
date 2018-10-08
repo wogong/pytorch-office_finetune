@@ -18,10 +18,11 @@ class CaffeTransform(torch.utils.data.Dataset):
         self.output_size = [227, 227]
         if self.train:
             self.horizontal_flip = True
-            self.multi_scale = [256, 257]
+            #self.multi_scale = [256, 257]
+            self.multi_scale = None
         else:
             self.horizontal_flip = False
-            self.multi_scale = [256, 257]
+            self.multi_scale = [256, 256]
 
     def __len__(self):
         return self.dataset.__len__()

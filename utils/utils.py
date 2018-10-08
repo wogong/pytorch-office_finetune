@@ -4,7 +4,7 @@ import os
 import random
 
 import torch
-import torch.backends.cudnn as cudnn
+
 
 from datasets.office import get_office
 

@@ -21,12 +21,18 @@ class AlexModel(nn.Module):
         self.fc.add_module("final0", nn.Linear(4096, 256))
         self.fc.add_module("final1", nn.Linear(256, 31))
 
+        nn.init.normal_(self.fc.final0.weight, 0, 0.01)
+        nn.init.normal_(self.fc.final1.weight, 0, 0.005)
+        nn.init.constant_(self.fc.final0.bias, 0.1)
+        nn.init.constant_(self.fc.final1.bias, 0.1)
+
     def forward(self, input_data):
         input_data = input_data.expand(input_data.data.shape[0], 3, 227, 227)
         feature = self.features(input_data)
         feature = feature.view(-1, 256 * 6 * 6)
         class_output = self.fc(feature)
         return class_output
+
 
 class ResModel(nn.Module):
 

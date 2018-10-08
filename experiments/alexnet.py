@@ -6,6 +6,7 @@ from models.network import AlexModel
 from utils.utils import get_data_loader, init_random_seed
 from core.pretrain import train_src
 from core.test import eval
+import torch.backends.cudnn as cudnn
 
 
 class Config(object):
@@ -27,11 +28,12 @@ class Config(object):
 
     # params for training network
     num_gpu = 1
-    num_epochs = 200
+    num_epochs = 1000
     log_step = 20  # iter
     eval_step = 100  # epoch
-    save_step = 2000
+    save_step = 3000
     manual_seed = 1000
+    #manual_seed = None
     max_step = 5000
 
     # params for optimizing
@@ -46,6 +48,9 @@ if __name__ == '__main__':
 
     # init device
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    if torch.cuda.is_available():
+        pass
+        #cudnn.benchmark = True
 
     # load dataset
     src_data_loader = get_data_loader(
