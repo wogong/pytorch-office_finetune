@@ -16,7 +16,7 @@ A PyTorch implementation for fine-tuning AlexNet and ResNet on Office dataset.
 
 ## Note
 
-- alexnet pretrained model is converted  from caffe pretrained model (`bvlc_reference_caffenet.caffemodel`), using <https://github.com/leelabcnbc/pytorch-caffe-models>. Converted model can be download [here](https://www.dropbox.com/s/4x1hzbachpezx0w/alexnet_caffe.pth?dl=0), `inference.py` can be used as inference invalidating
+- alexnet pretrained model is converted  from caffe pretrained model (`bvlc_reference_caffenet.caffemodel`), using <https://github.com/leelabcnbc/pytorch-caffe-models>. Converted model can be download [here](https://www.dropbox.com/s/4x1hzbachpezx0w/alexnet_caffe.pth?dl=0), `inference.py` can be used as inference validation.
 - LRN layer is officially supported by PyTorch now
 - Caffe's AlexNet implementation has different LRN/Pool layer order from original paper, this repo uses  conv -> pool -> LRN order (better results). Refer to <https://github.com/BVLC/caffe/issues/296> for details
 - tried <https://github.com/jiecaoyu/pytorch_imagenet>, results is bad (<50%)
